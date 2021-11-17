@@ -1,3 +1,5 @@
+/** @format */
+
 body {
   font-family: arial, sans-serif;
   background-color: #a6d8f0;
@@ -80,6 +82,10 @@ button {
   border: none;
   border-radius: 2px;
   width: 100%;
+}
+
+.source-code {
+  text-align: center;
 }
 
 button:hover {

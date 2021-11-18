@@ -1,3 +1,5 @@
+/** @format */
+
 //Date and Time Format
 function currentDate(date) {
   let hours = date.getHours();
@@ -17,7 +19,7 @@ function currentDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[dayIndex];
 
@@ -41,13 +43,13 @@ function search(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
 }
 
 let farenheitLink = document.querySelector("#tempF");
@@ -60,7 +62,9 @@ celsiusLink.addEventListener("click", convertToCelsius);
 function displayWeather(response) {
   console.log(response.data);
   document.querySelector("#current-city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;

@@ -43,12 +43,14 @@ function search(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  let temperature = temperatureElement.innerHTML;
   temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  let temperature = temperatureElement.innerHTML;
   temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
 }
 

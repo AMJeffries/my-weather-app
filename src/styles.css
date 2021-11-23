@@ -11,6 +11,7 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin: 0;
+  margin-bottom: 5px;
 }
 
 ul {
@@ -38,7 +39,6 @@ button {
   margin: 20px auto;
   border-radius: 10px;
   max-width: 600px;
-  margin-bottom: 5px;
 }
 
 .weather-icon {

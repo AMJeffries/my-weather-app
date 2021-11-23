@@ -38,6 +38,7 @@ button {
   margin: 20px auto;
   border-radius: 10px;
   max-width: 600px;
+  margin-bottom: 5px;
 }
 
 .weather-icon {

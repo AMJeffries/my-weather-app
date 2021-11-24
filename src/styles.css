@@ -41,6 +41,12 @@ button {
   max-width: 600px;
 }
 
+.float-left img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+}
+
 .weather-icon {
   height: 64px;
   width: 64px;

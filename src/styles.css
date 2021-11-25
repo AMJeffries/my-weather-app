@@ -42,15 +42,9 @@ button {
 }
 
 .float-left img {
-  margin-right: 10px;
+  margin-right: 5px;
   height: 64px;
   width: 64px;
-}
-
-.weather-icon {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
 }
 
 .temperature {

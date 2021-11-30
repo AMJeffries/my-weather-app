@@ -2,6 +2,7 @@
 
 //Date and Time Format
 function currentDate(date) {
+  let todaysDate = new Date(date);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -23,7 +24,24 @@ function currentDate(date) {
   ];
   let day = days[dayIndex];
 
-  return `${day} ${hours}:${minutes}`;
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let todaysDayDate = todaysDate.getDate();
+
+  return `${day} ${month} ${todaysDayDate}, ${hours}:${minutes}`;
 }
 
 let dateElement = document.querySelector("#date");
@@ -94,7 +112,7 @@ function displayForecast(response) {
           )}° |</span>
           <span class="weather-forecast-temperature-min"> ${Math.round(
             forecastDay.temp.min
-          )}° </span>
+          )}°C </span>
         </div>
       </div>
   `;
